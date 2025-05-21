@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compteur Stylé</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Compteur</h1>
+    <div class="counter" id="counter">0</div>
+    <div class="buttons">
+      <button onclick="decrement()">- Décrémenter</button>
+      <button onclick="reset()">Réinitialiser</button>
+      <button onclick="increment()">+ Incrémenter</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+
+    function increment() {
+      count++;
+      counter.textContent = count;
+    }
+
+    function decrement() {
+      count--;
+      counter.textContent = count;
+    }
+
+    function reset() {
+      count = 0;
+      counter.textContent = count;
+    }
+  </script>
+</body>
+</html>
